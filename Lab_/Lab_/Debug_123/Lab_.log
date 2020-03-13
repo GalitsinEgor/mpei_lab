@@ -1,0 +1,4 @@
+﻿  Lab_.cpp
+task2.obj : error LNK2005: "struct utils::Point __cdecl utils::waitForPointInput(void)" (?waitForPointInput@utils@@YA?AUPoint@1@XZ) already defined in Lab_.obj
+Lab_.obj : error LNK2019: unresolved external symbol "void __cdecl task2::calc14(void)" (?calc14@task2@@YAXXZ) referenced in function _wmain
+D:\projects\Lab_\Debug\Lab_.exe : fatal error LNK1120: 1 unresolved externals
