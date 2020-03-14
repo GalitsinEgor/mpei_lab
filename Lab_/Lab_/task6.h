@@ -17,4 +17,9 @@ namespace task6
 	void replaceSubstring();
 	void countSubstrings();
 	void replaceExtension();
+	void formatText();
+	void removeDoubleSpaces();
+	void binToDec();
+	void checkDateFormat();
+	void simpleCalc();
 }

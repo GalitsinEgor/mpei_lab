@@ -377,5 +377,132 @@ namespace task6
 		string result = firstString + "." + replacement;
 		cout << result << endl;
 	}
+
+	void formatText()
+	{
+		int width = utils::waitForInput<int>("text width");
+		cin.ignore();
+		string text = utils::waitForStringInput();
+		list<string> strings = splitStringInternal(text, " ");
+
+		int strLength = 0;
+		for each (string var in strings)
+		{
+			if ((strLength + var.length() + 1) >= width)
+			{
+				cout << endl;
+				strLength = 0;
+			}
+
+			cout << var << " ";
+			strLength += var.length() + 1;
+		}
+	}
+
+	void removeDoubleSpaces()
+	{
+		string str = utils::waitForStringInput();
+		int tmp = 0;
+		replaceSubstring(&str, "  ", " ", &tmp);
+		cout << str << endl;
+	}
+
+	void binToDec()
+	{
+		string binary = utils::waitForInput<string>("binary");
+		std::cout << std::stoi(binary, nullptr, 2) << endl;
+	}
+
+	bool checkDateFormatInsternal(string dateStr)
+	{
+		list<string> strings = splitStringInternal(dateStr, ".");
+		int size = strings.size();
+		if (size < 3 || size > 3)
+			return false;
+
+		int id = 0;
+		for each (string var in strings)
+		{
+			switch (id)
+			{
+				case 0:
+				{
+					int day = std::stoi(var, nullptr, 10);
+					if (day < 1 || day > 31)
+						return false;
+
+					break;
+				}
+				case 1:
+				{
+					int month = std::stoi(var, nullptr, 10);
+					if (month < 1 || month > 12)
+						return false;
+
+					break;
+				}
+				case 2:
+				{
+					int year = std::stoi(var, nullptr, 10);
+					if (year < 1000)
+						return false;
+
+					break;
+				}
+			}
+			id++;
+		}
+
+		return true;
+	}
+	void checkDateFormat()
+	{
+		string dateStr = utils::waitForStringInput();
+		if (checkDateFormatInsternal(dateStr))
+		{
+			cout << "YES" << endl;
+		}
+		else 
+		{
+			cout << "NO" << endl;
+		}
+			
+	}
+
+	void simpleCalc()
+	{
+		string exp = utils::waitForStringInput();
+		string currentValue = "";
+		int action = 1;
+		int result = 0;
+		int lastNumber = 0;
+		int length = exp.length() - 1;
+		for (int i = 0; i <= length; i++)
+		{
+			if (exp[i] != '+' && exp[i] != '-')
+			{
+				currentValue += exp[i];
+				if (i != length)
+				{
+					continue;
+				}
+			}
+
+			lastNumber = std::stoi(currentValue, nullptr, 10);
+			currentValue = "";
+			result += lastNumber * action;
+
+			if (exp[i] == '+')
+			{
+				action = 1;
+			}
+			else if (exp[i] == '-')
+			{
+				action = -1;
+			}
+		}
+
+		cout << result << endl;
+	}
 	
 }

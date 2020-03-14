@@ -1,10 +1,8 @@
-﻿  Lab_.cpp
-E:\greenCrab\mpei\Lab\Lab_\Lab_\Lab_.cpp(21,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  task6.cpp
-E:\greenCrab\mpei\Lab\Lab_\Lab_\task6.cpp(26,21): warning C4018: '<': signed/unsigned mismatch
-E:\greenCrab\mpei\Lab\Lab_\Lab_\task6.cpp(66,14): warning C4018: '>': signed/unsigned mismatch
-E:\greenCrab\mpei\Lab\Lab_\Lab_\task6.cpp(102,31): warning C4018: '<': signed/unsigned mismatch
-E:\greenCrab\mpei\Lab\Lab_\Lab_\task6.cpp(119,21): warning C4018: '<': signed/unsigned mismatch
-E:\greenCrab\mpei\Lab\Lab_\Lab_\task6.cpp(177,21): warning C4018: '<': signed/unsigned mismatch
-  Generating Code...
-  Lab_.vcxproj -> E:\greenCrab\mpei\Lab\Lab_\Debug\Lab_.exe
+﻿  task6.cpp
+E:\greenCrab\Projects\mpei_lab\Lab_\Lab_\task6.cpp(26,21): warning C4018: '<': signed/unsigned mismatch
+E:\greenCrab\Projects\mpei_lab\Lab_\Lab_\task6.cpp(66,14): warning C4018: '>': signed/unsigned mismatch
+E:\greenCrab\Projects\mpei_lab\Lab_\Lab_\task6.cpp(102,31): warning C4018: '<': signed/unsigned mismatch
+E:\greenCrab\Projects\mpei_lab\Lab_\Lab_\task6.cpp(119,21): warning C4018: '<': signed/unsigned mismatch
+E:\greenCrab\Projects\mpei_lab\Lab_\Lab_\task6.cpp(177,21): warning C4018: '<': signed/unsigned mismatch
+E:\greenCrab\Projects\mpei_lab\Lab_\Lab_\task6.cpp(391,39): warning C4018: '>=': signed/unsigned mismatch
+  Lab_.vcxproj -> E:\greenCrab\Projects\mpei_lab\Lab_\Debug\Lab_.exe

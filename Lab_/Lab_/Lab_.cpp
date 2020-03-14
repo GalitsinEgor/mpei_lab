@@ -20,7 +20,7 @@ int _tmain(int argc, _TCHAR* argv[])
 {
 	srand(time(0));
 
-	task6::replaceExtension();
+	task6::simpleCalc();
 
 	//hanoiTowers::start();
 
