@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <list>
 
 namespace utils
 {
@@ -20,7 +21,17 @@ namespace utils
 		return res;
 	}
 
+	template<typename T>
+	T getElementAt(std::list<T> lst, int index)
+	{
+		auto l_front = lst.begin();
+		std::advance(l_front, index);
+		T res = *l_front;
+		return res;
+	}
+
 	std::string waitForStringInput();
+	std::list<std::string> splitStringInternal(std::string str, std::string divider);
 	#endif
 
 	Point waitForPointInput();

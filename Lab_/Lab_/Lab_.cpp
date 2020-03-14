@@ -6,6 +6,7 @@
 #include "task4.h"
 #include "task5.h"
 #include "task6.h"
+#include "task7.h"
 #include "hanoiTowers.h"
 #include <iomanip>
 
@@ -20,7 +21,7 @@ int _tmain(int argc, _TCHAR* argv[])
 {
 	srand(time(0));
 
-	task6::simpleCalc();
+	task7::fillArrayReversed();
 
 	//hanoiTowers::start();
 

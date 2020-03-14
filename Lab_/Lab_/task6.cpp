@@ -14,52 +14,6 @@ namespace task6
 {
 	using namespace std;
 
-	list<string> splitStringInternal(string str, string divider)
-	{
-		list<string> strings;
-		string resStr = "";
-		string tmpStr = "";
-
-		int dividerId = 0;
-		int dividerLength = divider.length();
-
-		for (int i = 0; i < str.length(); i++)
-		{
-			if (str[i] == divider[dividerId])
-			{
-				tmpStr += str[i];
-				dividerId++;
-				if (dividerId >= dividerLength)
-				{
-					dividerId = 0;
-					tmpStr = "";
-					strings.insert(strings.cend(), resStr);
-					resStr = "";
-				}
-			}
-			else
-			{
-				if (tmpStr != "")
-				{
-					resStr += tmpStr;
-					dividerId = 0;
-					tmpStr = "";
-				}
-				resStr += str[i];
-			}
-		}
-		
-		if (tmpStr != "")
-		{
-			resStr += tmpStr;
-		}
-		if (resStr != "")
-		{
-			strings.insert(strings.cend(), resStr);
-		}
-		return strings;
-	}
-
 	string getSubstring(string str, int startId, int length)
 	{
 		length = startId + length;
@@ -283,7 +237,7 @@ namespace task6
 	void splitFileName()
 	{
 		string fileName = utils::waitForStringInput();
-		list<string> strings = splitStringInternal(fileName, "\\");
+		list<string> strings = utils::splitStringInternal(fileName, "\\");
 		for each (string var in strings)
 		{
 			cout << var << endl;
@@ -293,7 +247,7 @@ namespace task6
 	void shortName1()
 	{
 		string name = utils::waitForStringInput();
-		list<string> strings = splitStringInternal(name, " ");
+		list<string> strings = utils::splitStringInternal(name, " ");
 		int id = 0;
 		for each (string var in strings)
 		{
@@ -313,7 +267,7 @@ namespace task6
 	void shortName2()
 	{
 		string name = utils::waitForStringInput();
-		list<string> strings = splitStringInternal(name, " ");
+		list<string> strings = utils::splitStringInternal(name, " ");
 		int id = 2;
 		string result[3];
 		char in;
@@ -368,7 +322,7 @@ namespace task6
 		string fileName = utils::waitForStringInput();
 		string replacement = utils::waitForStringInput();
 
-		list<string> strings = splitStringInternal(fileName, ".");
+		list<string> strings = utils::splitStringInternal(fileName, ".");
 
 		auto l_front = strings.begin();
 		std::advance(l_front, 0);
@@ -383,7 +337,7 @@ namespace task6
 		int width = utils::waitForInput<int>("text width");
 		cin.ignore();
 		string text = utils::waitForStringInput();
-		list<string> strings = splitStringInternal(text, " ");
+		list<string> strings = utils::splitStringInternal(text, " ");
 
 		int strLength = 0;
 		for each (string var in strings)
@@ -415,7 +369,7 @@ namespace task6
 
 	bool checkDateFormatInsternal(string dateStr)
 	{
-		list<string> strings = splitStringInternal(dateStr, ".");
+		list<string> strings = utils::splitStringInternal(dateStr, ".");
 		int size = strings.size();
 		if (size < 3 || size > 3)
 			return false;

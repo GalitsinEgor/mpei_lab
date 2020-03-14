@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include <iostream>
-#include <iomanip>
+#include <iomanip>v
+#include <list>
 #include "utils.h"
 
 namespace utils
@@ -33,6 +34,52 @@ namespace utils
 		std::cout << "Input a string" << std::endl;;
 		std::getline(std::cin, str);
 		return str;
+	}
+
+	std::list<std::string> splitStringInternal(std::string str, std::string divider)
+	{
+		std::list<std::string> strings;
+		std::string resStr = "";
+		std::string tmpStr = "";
+
+		int dividerId = 0;
+		int dividerLength = divider.length();
+
+		for (int i = 0; i < str.length(); i++)
+		{
+			if (str[i] == divider[dividerId])
+			{
+				tmpStr += str[i];
+				dividerId++;
+				if (dividerId >= dividerLength)
+				{
+					dividerId = 0;
+					tmpStr = "";
+					strings.insert(strings.cend(), resStr);
+					resStr = "";
+				}
+			}
+			else
+			{
+				if (tmpStr != "")
+				{
+					resStr += tmpStr;
+					dividerId = 0;
+					tmpStr = "";
+				}
+				resStr += str[i];
+			}
+		}
+
+		if (tmpStr != "")
+		{
+			resStr += tmpStr;
+		}
+		if (resStr != "")
+		{
+			strings.insert(strings.cend(), resStr);
+		}
+		return strings;
 	}
 
 }
