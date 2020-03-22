@@ -1,5 +1,2 @@
-﻿  Lab_.cpp
-E:\greenCrab\Projects\mpei_lab\Lab_\Lab_\Lab_.cpp(22,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  task7.cpp
-  Generating Code...
+﻿  sorts.cpp
   Lab_.vcxproj -> E:\greenCrab\Projects\mpei_lab\Lab_\Debug\Lab_.exe

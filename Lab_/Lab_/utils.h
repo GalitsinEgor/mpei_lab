@@ -22,6 +22,14 @@ namespace utils
 	}
 
 	template<typename T>
+	void swap(T* arr, int fid, int sid)
+	{
+		T elem = arr[sid];
+		arr[sid] = arr[fid];
+		arr[fid] = elem;
+	}
+
+	template<typename T>
 	T getElementAt(std::list<T> lst, int index)
 	{
 		auto l_front = lst.begin();
@@ -37,6 +45,7 @@ namespace utils
 	Point waitForPointInput();
 	int CountSetw(int strLength, int displayWidth);
 	int GetRandomInt(int a, int b);
+	int sumByPlaces(int value);
 	
 }
 

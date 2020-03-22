@@ -36,6 +36,17 @@ namespace utils
 		return str;
 	}
 
+	int sumByPlaces(int value)
+	{
+		int sum = 0;
+		while (value > 0)
+		{
+			sum += value % 10;
+			value = value / 10;
+		}
+		return sum;
+	}
+
 	std::list<std::string> splitStringInternal(std::string str, std::string divider)
 	{
 		std::list<std::string> strings;

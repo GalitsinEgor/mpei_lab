@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include <iostream>
+#include "utils.h"
 #include "task1.h"
 #include "task2.h"
 #include "task3.h"
@@ -7,6 +8,7 @@
 #include "task5.h"
 #include "task6.h"
 #include "task7.h"
+#include "sorts.h"
 #include "hanoiTowers.h"
 #include <iomanip>
 
@@ -21,37 +23,48 @@ int _tmain(int argc, _TCHAR* argv[])
 {
 	srand(time(0));
 
-	task7::fillArrayReversed();
+	int number = utils::waitForInput<int>("Task number");
+	std::cin.ignore();
+	switch (number)
+	{
+	case 1:
+		sorts::task1();
+		break;
+	case 2:
+		sorts::task2();
+		break;
+	case 3:
+		sorts::task3();
+		break;
+	case 4:
+		sorts::task4();
+		break;
+	case 5:
+		sorts::task5();
+		break;
+	case 6:
+		sorts::task6();
+		break;
+	case 7:
+		sorts::task7();
+		break;
+	case 8:
+		sorts::task8();
+		break;
+	case 9:
+		sorts::task9();
+		break;
+	case 10:
+		sorts::task10();
+		break;
+	case 11:
+		sorts::task11();
+		break;
 
-	//hanoiTowers::start();
-
-	//task5::procedureTest1();
-
-
-	//task4::cycling1();
-
-	/*task1::calc();
-	task1::drawBuildingManually(false);
-	task1::drawBuildingManually(true);
-	task1::stairCase();*/
-
-	//task2::calc1();
-	//task2::calc2();
-	//task2::calc3();
-	//task2::calc4();
-	//task2::calc5();
-	//task2::calc6();
-	//task2::calc7();
-	//task2::calc8();
-	//task2::calc9();
-	//task2::calc10();
-	//task2::calc11();
-	//task2::calc12();
-	//task2::calc13();
-	//task2::calc14();
-	//task2::calc15Cycle();
-	//task2::calc15Formula();
-
+	default:
+		std::cout << "wrong number" << std::endl;
+		break;
+	}
 
 	pauseConsole();
 	return 0;
