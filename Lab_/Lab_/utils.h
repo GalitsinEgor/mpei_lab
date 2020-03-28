@@ -38,6 +38,16 @@ namespace utils
 		return res;
 	}
 
+	template<typename T>
+	void printArray(T* arrPtr, int length)
+	{
+		for (int i = 0; i < length; i++)
+		{
+			std::cout << arrPtr[i] << " ";
+		}
+		std::cout << std::endl;
+	}
+
 	std::string waitForStringInput();
 	std::list<std::string> splitStringInternal(std::string str, std::string divider);
 	#endif
@@ -46,6 +56,8 @@ namespace utils
 	int CountSetw(int strLength, int displayWidth);
 	int GetRandomInt(int a, int b);
 	int sumByPlaces(int value);
+	int* waitForIntArrayInput(int* resultLength);
+	
 	
 }
 

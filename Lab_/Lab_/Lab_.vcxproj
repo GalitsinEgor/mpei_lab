@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="hanoiTowers.h" />
+    <ClInclude Include="matrices.h" />
     <ClInclude Include="sorts.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -94,6 +95,7 @@
   <ItemGroup>
     <ClCompile Include="hanoiTowers.cpp" />
     <ClCompile Include="Lab_.cpp" />
+    <ClCompile Include="matrices.cpp" />
     <ClCompile Include="sorts.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

@@ -1,2 +1,5 @@
-﻿  sorts.cpp
+﻿  Lab_.cpp
+E:\greenCrab\Projects\mpei_lab\Lab_\Lab_\Lab_.cpp(107,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  matrices.cpp
+  Generating Code...
   Lab_.vcxproj -> E:\greenCrab\Projects\mpei_lab\Lab_\Debug\Lab_.exe

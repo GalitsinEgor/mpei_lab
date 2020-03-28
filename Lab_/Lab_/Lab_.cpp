@@ -9,9 +9,11 @@
 #include "task6.h"
 #include "task7.h"
 #include "sorts.h"
+#include "matrices.h"
 #include "hanoiTowers.h"
 #include <iomanip>
 
+using namespace std;
 
 void pauseConsole()
 {
@@ -19,10 +21,8 @@ void pauseConsole()
 	std::cin >> c;
 }
 
-int _tmain(int argc, _TCHAR* argv[])
+void lab1()
 {
-	srand(time(0));
-
 	int number = utils::waitForInput<int>("Task number");
 	std::cin.ignore();
 	switch (number)
@@ -63,6 +63,64 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	default:
 		std::cout << "wrong number" << std::endl;
+		break;
+	}
+
+}
+
+void lab2()
+{
+	int number = utils::waitForInput<int>("Task number");
+	std::cin.ignore();
+	switch (number)
+	{
+	case 1:
+		matrices::countMatrixSum();
+		break;
+	case 2:
+		matrices::countDeterminedElement();
+		break;
+	case 3:
+		matrices::printMinMax();
+		break;
+	case 4:
+		matrices::printLinesWithMinSum();
+		break;
+	case 5:
+		matrices::printColumnsContainMaxValue();
+		break;
+	case 6:
+		matrices::nullAllAboveMainDiagonal();
+		break;
+	case 7:
+		matrices::checkIfSymmetric();
+		break;
+
+	default:
+		std::cout << "wrong number" << std::endl;
+		break;
+	}
+}
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	srand(time(0));
+
+	cout << 1 << "- sorts" << endl;
+	cout << 2 << "- matrices" << endl;
+
+	int labId = utils::waitForInput<int>("lab id");
+
+	switch (labId)
+	{
+	case 1:
+		lab1();
+		break;
+	case 2:
+		lab2();
+		break;
+	default:
+		cout << "unknown" << endl;
 		break;
 	}
 

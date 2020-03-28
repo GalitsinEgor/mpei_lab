@@ -93,5 +93,20 @@ namespace utils
 		return strings;
 	}
 
+	int* waitForIntArrayInput(int* resultLength)
+	{
+		std::string str = utils::waitForStringInput();
+		std::list<std::string> strList = utils::splitStringInternal(str, " ");
+		*resultLength = strList.size();
+		int* result = new int[*resultLength];
+
+		int index = 0;
+		for each (std::string tmpStr in strList)
+		{
+			result[index++] = (int)std::stoi(tmpStr, nullptr, 10);
+		}
+
+		return result;
+	}
 }
 
