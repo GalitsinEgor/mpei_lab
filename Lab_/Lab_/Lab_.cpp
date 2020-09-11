@@ -11,6 +11,7 @@
 #include "sorts.h"
 #include "matrices.h"
 #include "hanoiTowers.h"
+#include "SecondYearLabs.h"
 #include <iomanip>
 
 using namespace std;
@@ -103,6 +104,15 @@ void lab2()
 }
 
 int _tmain(int argc, _TCHAR* argv[])
+{
+	SecondYearLabs* labs = new SecondYearLabs();
+	labs->Task_1_3_3_6();
+
+	pauseConsole();
+	return 0;
+}
+
+int _tmain2(int argc, _TCHAR* argv[])
 {
 	srand(time(0));
 
